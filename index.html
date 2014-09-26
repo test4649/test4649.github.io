@@ -1,10 +1,19 @@
 <html>
 <body>
-aaa
-<!-- Segment Pixel - セグメントテスト - DO NOT MODIFY -->
-<script src='http://tg.test.socdm.com/s/so_sg.js?sgid=9820&t=1' type='text/javascript'></script>
-<!-- End of Segment Pixel -->
 bbb
+
+<script language="JavaScript" type="text/javascript">
+//<![CDATA[
+(function() {
+          var random = new Date();
+            
+              var so_src = ('https:' == document.location.protocol ? 'https://tg.test.socdm.com' : 'http://tg.test.socdm.com') +
+                '/adsv/v1?posall=BBB&id=8313&t=js&rnd='+ random.getTime() + '&tp=' + encodeURIComponent(document.location.href) + '&pp=' + encodeURIComponent(document.referrer);
+                  
+                     document.write('<sc'+'ript language="JavaScript" type="text/javascript" src="'+so_src+'"></sc'+'ript>');
+})();
+//]]>
+</script>
 
 </body>
 </html>
