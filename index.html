@@ -1,19 +1,92 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"
+xml:lang="en" lang="ja">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style type="text/css" media="screen">
+button:hover {
+cursor: pointer;
+border: 1px solid #9b9c96;
+}
+button {
+font-size: 12px;
+color: #050505;
+padding: 4px 8px;
+background: -moz-linear-gradient(
+top,
+#ffffff 0%,
+#c6c7c1);
+background: -webkit-gradient(
+linear, left top, left bottom, 
+from(#ffffff),
+to(#c6c7c1));
+border-radius: 17px;
+-moz-border-radius: 17px;
+-webkit-border-radius: 17px;
+border: 1px solid #CECECE;
+}
+p {
+color: #444;
+font-family: Helvetica, Arial, 'Hiragino Kaku Gothic Pro', Meiryo, 'MS
+PGothic', sans-serif;
+font-size: 14px;
+line-height: 22px;
+}
+</style>
 <body>
-bbb
-
-<script language="JavaScript" type="text/javascript">
-//<![CDATA[
-(function() {
-          var random = new Date();
-            
-              var so_src = ('https:' == document.location.protocol ? 'https://tg.test.socdm.com' : 'http://tg.test.socdm.com') +
-                '/adsv/v1?posall=BBB&id=8313&t=js&rnd='+ random.getTime() + '&tp=' + encodeURIComponent(document.location.href) + '&pp=' + encodeURIComponent(document.referrer);
-                  
-                     document.write('<sc'+'ript language="JavaScript" type="text/javascript" src="'+so_src+'"></sc'+'ript>');
+<div id="m1" style="display:none;">
+<p>現在、このブラウザでのクッキーによるトラッキングはアクティブです</p>
+<button type="button" name="" value="" onclick="so_optout();">広告配信用クッキーを無効化（オプトアウト）する</button>
+</div>
+<div id="m2" style="display:none;">
+<p>現在、このブラウザでのクッキーによるトラッキングはオプトアウトされています</p>
+<button type="button" name="" value="" onclick="so_optout_cancel();">広告配信用クッキーを有効にする</button>
+</div>
+<div id="m3" style="display:none;">
+<p>現在、このブラウザではクッキーによるトラッキングはされていません</p>
+</div>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script language="javascript">
+<!--
+(function(){
+$.ajax({
+  type: 'GET',
+  url: 'http://tg.socdm.com/aux/is_optout',
+  dataType: 'jsonp',
+  cache: false,
+  success: function(data) {
+    if (data.is_optout) {
+      document.getElementById('m2').style.display='block';
+    } else {
+      document.getElementById('m1').style.display='block';
+    }
+  }});
 })();
-//]]>
+function so_optout() {
+  $.ajax({
+    type: 'GET',
+    url: 'http://tg.socdm.com/aux/optout',
+    dataType: 'jsonp',
+    cache: false,
+    success: function(data) {
+      alert('広告配信用クッキーの無効化（オプトアウト）が完了しました');
+      location.reload();
+  }});
+}
+function so_optout_cancel(){
+  $.ajax({
+    type: 'GET',
+    url: 'http://tg.socdm.com/aux/optin',
+    dataType: 'jsonp',
+    cache: false,
+    success: function(data) {
+      alert('広告配信用クッキーが有効になりました');
+      location.reload();
+  }});
+}
+//-->
 </script>
-
-</body>
-</html>
+</head>
+</body></html>
