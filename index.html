@@ -3,41 +3,9 @@
 xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"
 xml:lang="en" lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="css/common_low.css" media="screen">
-<link rel="stylesheet" type="text/css" href="css/terms.css" media="screen">
-<!--
-<style type="text/css" media="screen">
-button:hover {
-cursor: pointer;
-border: 1px solid #9b9c96;
-}
-button {
-font-size: 12px;
-color: #050505;
-padding: 4px 8px;
-background: -moz-linear-gradient(
-top,
-#ffffff 0%,
-#c6c7c1);
-background: -webkit-gradient(
-linear, left top, left bottom, 
-from(#ffffff),
-to(#c6c7c1));
-border-radius: 17px;
--moz-border-radius: 17px;
--webkit-border-radius: 17px;
-border: 1px solid #CECECE;
-}
-p {
-color: #444;
-font-family: Helvetica, Arial, 'Hiragino Kaku Gothic Pro', Meiryo, 'MS
-PGothic', sans-serif;
-font-size: 14px;
-line-height: 22px;
-}
-</style>
--->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="css/common_low.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="css/terms.css" media="screen">
 </head>
 <body>
     <div id="m1" style="display:none;">
@@ -49,13 +17,13 @@ line-height: 22px;
         <dd style="margin-left: 10px;">このブラウザではターゲティング広告の配信が有効になっています。</dd>
       </dl>
     </div>
-    <div id="m2" class="targetting" style="display:none;">
+    <div id="m2" style="display:none;">
       <div align="center">
-        <button type="button" class="btn_to_common" value="" onclick="so_optout();">ターゲティング広告配信を停止する</button>
+        <button type="button" class="btn_to_common" value="" onclick="so_optout_cancel();">ターゲティング広告配信を有効にする</button>
       </div><br/>
       <dl class="targetting">
         <dt>お客様の現在のステータス</dt>
-        <dd style="margin-left: 10px;">このブラウザではターゲティング広告の配信が有効になっています。</dd>
+        <dd style="margin-left: 10px;">このブラウザではターゲティング広告の配信が無効になっています。</dd>
       </dl>
     </div>
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
