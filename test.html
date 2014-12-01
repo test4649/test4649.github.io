@@ -1,52 +1,9 @@
 <html>
 <body>
-<script type='text/javascript'>
-  var plugin = (navigator.mimeTypes && navigator.mimeTypes["application/x-shockwave-flash"]) ? navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin : false;
-    var rc_data = %%WO_RECOMMENDED_ITEMS_JSON%%;  // for debug
-      var enc_rc_data = "%%WO_ENCODED_RECOMMENDED_ITEMS_JSON%%"; // for debug
-        var replace_image = %%WO_REPLACE_IMAGE%%;
-
-          if ( plugin ) {
-                      var ver_str = plugin.description.match(/\d+\.?\d?/);
-                          plugin = (ver_str == null) ? false : parseInt(ver_str[0]) >=6;
-                            }
-                              else if (navigator.userAgent && navigator.userAgent.indexOf("MSIE")>=0 && navigator.userAgent.indexOf("Windows")>=0) {
-                                          var html = "";
-                                              html += '<SCR' + 'IPT LANGUAGE=VBScript> \n';
-                                                  html += 'on error resume next \n';
-                                                      html += 'plugin = ( IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.6")))\n';
-                                                          html += '</SCR' + 'IPT> \n';
-                                                              document.write(html);
-                                                                }
-
-                                                                  if ( replace_image == false && plugin ) {
-                                                                              var html = "";
-                                                                                  html += '<object\n';
-                                                                                      html += '  classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"\n';
-                                                                                          html += '  codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=6,0,0,0"\n';
-                                                                                              html += '  width="300" height="250" >\n';
-                                                                                                  html += '\n';
-                                                                                                      html += '  <param name="movie" value="http://i.socdm.com/a/0/4/12185/20130425055623-837ed2697dca33.swf">\n';
-                                                                                                          html += '  <param name="FlashVars" value="rc_data=%%WO_ENCODED_RECOMMENDED_ITEMS_JSON%%&click_url=%%WO_DEFAULT_ENCODED_CLICK_URL%%&img_url=%%WO_DEFAULT_ENCODED_IMG_URL%%">\n';
-                                                                                                              html += '  <param name="menu" value="false">\n';
-                                                                                                                  html += '  <param name="quality" value="high">\n';
-                                                                                                                      html += '  <param name="allowScriptAccess" value="always">\n';
-                                                                                                                          html += '\n';
-                                                                                                                              html += '  <embed src="http://i.socdm.com/a/0/4/12185/20130425055623-837ed2697dca33.swf" \n';
-                                                                                                                                  html += '         flashVars="rc_data=%%WO_ENCODED_RECOMMENDED_ITEMS_JSON%%&click_url=%%WO_DEFAULT_ENCODED_CLICK_URL%%&img_url=%%WO_DEFAULT_ENCODED_IMG_URL%%"\n';
-                                                                                                                                      html += '         quality="high" menu="false" allowscriptaccess="always"\n';
-                                                                                                                                          html += '         pluginspage="http://www.macromedia.com/jp/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"\n';
-                                                                                                                                              html += '         type="application/x-shockwave-flash"\n';
-                                                                                                                                                  html += '         width="300" height="250" >\n';
-                                                                                                                                                      html += '</object>\n';
-                                                                                                                                                          document.write(html);
-                                                                                                                                                            } else {
-                                                                                                                                                                        document.write('<a href="%%rd%%/%%space%%/g/B:%%B64UESC%%http://www.kakuyasu.co.jp/?cid=rtoaster_ads%%B64UESCEND%%" target="_blank"><img src="http://i.socdm.com/a/0/4/12186/20130401111246-bb594d9b44ec9f.gif" width="300" height="250" border="0" style="vertical-align: text-bottom;"></a>');
-                                                                                                                                                                          }
-                                                                                                                                                                          </script>
-                                                                                                                                                                          <noscript>
-                                                                                                                                                                            <a href="%%rd%%/%%space%%/g/B:%%B64UESC%%http://www.kakuyasu.co.jp/?cid=rtoaster_ads%%B64UESCEND%%" target="_blank"><img src="http://i.socdm.com/a/0/4/12186/20130401111246-bb594d9b44ec9f.gif" width="300" height="250" border="0" style="vertical-align: text-bottom;"></a>
-                                                                                                                                                                            </noscript>
-
+test1
+<img src="http(s)://ssp-sync.i-mobile.co.jp/sync.ashx?dspid=8" width="1" height="1" style="position:absolute;border:none;padding:0;margin:0;" />
+test2
+<img src="http(s)://ssp-sync.i-mobile.co.jp/sync.ashx?dspid=9" width="1" height="1" style="position:absolute;border:none;padding:0;margin:0;" />
+test3
 </body>
 </html>
