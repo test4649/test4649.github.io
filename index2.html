@@ -8,7 +8,7 @@ test
   var random = new Date();
   
   var so_src = ('https:' == document.location.protocol ? 'https://tg.test.socdm.com' : 'http://tg.test.socdm.com') +
-  '/adsv/v1?posall=AAAAAA&id=8313&t=js&width=300&height=250&rnd='+ random.getTime() + '&tp=' + encodeURIComponent(document.location.href) + '&pp=' + encodeURIComponent(document.referrer);
+  '/adsv/v1?posall=CCC&id=8313&t=js&rnd='+ random.getTime() + '&tp=' + encodeURIComponent(document.location.href) + '&pp=' + encodeURIComponent(document.referrer);
   
    document.write('<sc'+'ript language="JavaScript" type="text/javascript" src="'+so_src+'"></sc'+'ript>');
 })();
