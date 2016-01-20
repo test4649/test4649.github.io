@@ -2,8 +2,47 @@
 <body>
 test
 
-<script src="http://bigman-test.scaleout.jp/sdk/js/adg-script-loader-stg.js?id=9985&targetID=adg_9985&displayid=1&adType=SP&async=false&tagver=2.0.0"></script>
+<!-- Cxense 3d ad tag start -->
+<div class="adSlot" >
+    <div class="adSlot3d"  align="center">
+        <div id="cXTarget" style="display: none"></div>
+        <script type="text/javascript">
 
+            var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+            cX.fX = cX.fX || {}; cX.fX.callQueue = cX.fX.callQueue || [];
+            cX.callQueue.push(['invoke', function () {
+                cX.insertAdSpace({
+                    adSpaceId: '00000001610fbb86',
+                    insertBeforeElementId: 'cXTarget',
+                    renderFunction: function (data, context) {
+                        cX.fX.callQueue.push(function () {
+                            cX.fX.render3dParallaxAd(data, context, {
+                                width: 700, height: 600, heightTop: 150, heightBottom: 250, heightOrig: 1600, frames: 50
+                            });
+                        });
+                    },
+                    k: 'shoe',
+                    ps: 1
+                });
+            }]);
+
+            // Async load of cx.js
+            (function (d, s, e, t) {
+                e = d.createElement(s); e.type = 'text/java' + s; e.async = 'async';
+                e.src = 'http' + ('https:' === location.protocol ? 's://s' : '://') + 'cdn.cxense.com/cx.js';
+                t = d.getElementsByTagName(s)[0]; t.parentNode.insertBefore(e, t);
+            })(document, 'script');
+
+            // Async load of cx-fx.js
+            (function (d, s, e, t) {
+                e = d.createElement(s); e.type = 'text/java' + s; e.async = 'async';
+                e.src = 'http://dev1.cxpublic.com/research/3dAds/cx-fx.js';
+                t = d.getElementsByTagName(s)[0]; t.parentNode.insertBefore(e, t);
+            })(document, 'script');
+        </script>
+    </div>
+</div>
+<!-- Cxense 3d ad tag end -->
 test2
 test3
 </body>
