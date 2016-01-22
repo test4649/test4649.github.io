@@ -1,48 +1,30 @@
 <html>
 <body>
 test
-
-<!-- Cxense 3d ad tag start -->
-<div class="adSlot" >
-    <div class="adSlot3d"  align="center">
-        <div id="cXTarget" style="display: none"></div>
-        <script type="text/javascript">
-
-            var cX = cX || {}; cX.callQueue = cX.callQueue || [];
-            cX.fX = cX.fX || {}; cX.fX.callQueue = cX.fX.callQueue || [];
-            cX.callQueue.push(['invoke', function () {
-                cX.insertAdSpace({
-                    adSpaceId: '00000001610fbb86',
-                    insertBeforeElementId: 'cXTarget',
-                    renderFunction: function (data, context) {
-                        cX.fX.callQueue.push(function () {
-                            cX.fX.render3dParallaxAd(data, context, {
-                                width: 700, height: 600, heightTop: 150, heightBottom: 250, heightOrig: 1600, frames: 50
-                            });
-                        });
-                    },
-                    k: 'shoe',
-                    ps: 1
-                });
-            }]);
-
-            // Async load of cx.js
-            (function (d, s, e, t) {
-                e = d.createElement(s); e.type = 'text/java' + s; e.async = 'async';
-                e.src = 'http' + ('https:' === location.protocol ? 's://s' : '://') + 'cdn.cxense.com/cx.js';
-                t = d.getElementsByTagName(s)[0]; t.parentNode.insertBefore(e, t);
-            })(document, 'script');
-
-            // Async load of cx-fx.js
-            (function (d, s, e, t) {
-                e = d.createElement(s); e.type = 'text/java' + s; e.async = 'async';
-                e.src = 'http://dev1.cxpublic.com/research/3dAds/cx-fx.js';
-                t = d.getElementsByTagName(s)[0]; t.parentNode.insertBefore(e, t);
-            })(document, 'script');
-        </script>
-    </div>
-</div>
-<!-- Cxense 3d ad tag end -->
+<!-- Conversion Pixel - データフィード - DO NOT MODIFY -->
+<script type='text/javascript'>
+  //<![CDATA[
+    var supership_pixel_params = {
+      datafeed_conversions: [
+        { product_id: "STRING_PRODUCT_ID_1", price: INTEGER_PRICE_1 },
+        { product_id: "STRING_PRODUCT_ID_2", price: INTEGER_PRICE_2 }
+      ]
+    };
+  //]]>
+</script>
+<script src='//tg.test.socdm.com/s/so_sg.js?cvid=1910&datafeed=cv-14253' type='text/javascript'></script>
+<!-- End of Conversion Pixel -->
+test
+<!-- Segment Pixel - データフィード - DO NOT MODIFY -->
+<script type='text/javascript'>
+  //<![CDATA[
+    var supership_pixel_params = {
+      datafeed_product_id: "STRING_PRODUCT_ID"
+    };
+  //]]>
+</script>
+<script src='//tg.test.socdm.com/s/so_sg.js?datafeed=detail-14253&sgid=9883' type='text/javascript'></script>
+<!-- End of Segment Pixel -->
 test2
 test3
 </body>
