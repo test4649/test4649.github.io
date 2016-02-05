@@ -6,15 +6,14 @@
   var arr = [];
   "aaa|bbb|ccc".split("|").forEach(
      function(id){
-           arr.push(JSON.stringify({prouct_id: id, price: 0}));
+           arr.push({prouct_id: id, price: 0});
      }
    );
-   var supership_pixel_params = JSON.parse(JSON.stringify({datafeed_conversions: arr}));
+   var supership_pixel_params = {datafeed_conversions: arr};
   //]]>
 </script>
 <script src='https://ssl.socdm.com/s/so_sg.js?cvid=9571&datafeed=cv-14253' type='text/javascript'></script>
 <!-- End of Conversion Pixel -->
-
 
 <!-- Segment Pixel - KDDI株式会社_auショッピングモール - DO NOT MODIFY -->
 <script type='text/javascript'>
