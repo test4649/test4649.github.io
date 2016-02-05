@@ -9,10 +9,11 @@
            arr.push(JSON.stringify({prouct_id: id, price: 0}));
      }
    );
-   var supership_pixel_params = JSON.stringify({datafeed_conversions: arr});
+   var supership_pixel_params = JSON.parse(JSON.stringify({datafeed_conversions: arr}));
   //]]>
 </script>
 <script src='//tg.socdm.com/s/so_sg.js?cvid=9571&datafeed=cv-14253' type='text/javascript'></script>
 <!-- End of Conversion Pixel -->
+
 </body>
 </html>
