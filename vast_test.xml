@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="3.0">
+  <Ad>
+    <InLine>
+      <AdSystem>SOADS</AdSystem>
+      <AdTitle>the title</AdTitle>
+      <Description>the description</Description>
+      <Impression><![CDATA[http://bc.example.com/bc/v3?b=Y2hzbT0xMzksNzYwZWZhZWNpZD10ZXN0MjQ5NSZwb3M9TiZhZD1mYW1pbHkyNDk1L3NjaGVkMjQ5NS9jcmUyNDk1L2xvZzI0OTUvdGVzdDI0OTU6Ti9wcj1YYTQ7cHJiPVgxY1k7cHJvPVgxY1k7cHJvYz1KUFk7Y3JkMnk9ODA7Y3J5MmQ9MC4wMTI1MDAwMDAwMDAwMDAwMDE7&proto=suvt&bidtime=1420070400&ctsv=v126&t=.gif]]></Impression>
+      <Creatives>
+        <Creative AdID="cre2495">
+          <Linear skipoffset="00:00:15">
+            <Duration>00:01:00</Duration>
+            <TrackingEvents>
+              <Tracking event="start"><![CDATA[http://localhost/aux/vast_event?page_id=test2495&schedule_id=sched2495&creative_id=cre2495&event=start]]></Tracking>
+              <Tracking event="firstQuartile"><![CDATA[http://localhost/aux/vast_event?page_id=test2495&schedule_id=sched2495&creative_id=cre2495&event=firstQuartile]]></Tracking>
+              <Tracking event="midpoint"><![CDATA[http://localhost/aux/vast_event?page_id=test2495&schedule_id=sched2495&creative_id=cre2495&event=midpoint]]></Tracking>
+              <Tracking event="thirdQuartile"><![CDATA[http://localhost/aux/vast_event?page_id=test2495&schedule_id=sched2495&creative_id=cre2495&event=thirdQuartile]]></Tracking>
+              <Tracking event="complete"><![CDATA[http://localhost/aux/vast_event?page_id=test2495&schedule_id=sched2495&creative_id=cre2495&event=complete]]></Tracking>
+              <Tracking event="pause"><![CDATA[http://localhost/aux/vast_event?page_id=test2495&schedule_id=sched2495&creative_id=cre2495&event=pause]]></Tracking>
+              <Tracking event="resume"><![CDATA[http://localhost/aux/vast_event?page_id=test2495&schedule_id=sched2495&creative_id=cre2495&event=resume]]></Tracking>
+              <Tracking event="firstQuartile"><![CDATA[http://b.com]]></Tracking>
+              <Tracking event="start"><![CDATA[http://a1.com]]></Tracking>
+              <Tracking event="start"><![CDATA[http://a2.com]]></Tracking>
+            </TrackingEvents>
+            <VideoClicks>
+              <ClickThrough><![CDATA[http://rd.example.com/rd/v1/z/gqFj2gCTY2hzbT0xMzAsZGY3Njc3MDgvdGVzdDI0OTUvTi9mYW1pbHkyNDk1L3NjaGVkMjQ5NS9jcmUyNDk1L2xvZzI0OTUvdGVzdDI0OTU6Ti9wcj1YYTQ7cHJiPVgxY1k7cHJvPVgxY1k7cHJvYz1KUFk7Y3JkMnk9ODA7Y3J5MmQ9MC4wMTI1MDAwMDAwMDAwMDAwMDE7pXByb3RvpHN1dnQ/p/rd=aHR0cDovL3d3dy5leGFtcGxlLmNvbS9yZD91cmw9;/g/http://lp.example.com/]]></ClickThrough>
+            </VideoClicks>
+            <MediaFiles>
+              <MediaFile delivery="progressive" bitrate="1000" width="640" height="480" type="video/mp4">http://www.example.com/vast</MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
