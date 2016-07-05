@@ -3,6 +3,81 @@
 <script type="text/javascript">
 console.log(document.referrer);
 </script>
+
+<style>
+    .mainWrapper_160600-1 .jsInfoMarkWrapper .jsInfoMark,.mainWrapper_160600-1 img,article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}a,abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;vertical-align:baseline;font:inherit;font-size:100%}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-spacing:0;border-collapse:collapse}.mainWrapper_160600-1{height:600px;width:160px;position:relative;overflow:hidden;box-sizing:border-box;border:1px solid #bdbdbd;vertical-align:middle}.mainWrapper_160600-1 a{text-decoration:none}.mainWrapper_160600-1 .jsInfoMarkWrapper{position:absolute;top:0;right:0;background-color:
+a.click_url+'">'+'<div class="leftContentsWrapper">'+'<div class="imgWrapper secondLargest">'+
+                getImageUrl(thisData)+'</div>'+'</div>'+'<div class="rightContentsWrapper">'+'<div class="titleSet">'+
+                getTitle(thisData)+
+                getPrice(thisData)+'</div>'+
+                getDesc(thisData)+'</div>'+'</a>'+'</div>';}
+            return domParam;}
+        if(listShowStyle==large){for(var i=0;i<creativeItemSize;i++){var thisData=this.scaleout_creative_items[i];domParam+='<div class="list large">'+'<a target="_blank" href="'+thisData.click_url+'">'+'<div clas="leftContentsWrapper">'+'<div class="imgWrapper">'+
+                getImageUrl(thisData)+'</div>'+'</div>'+'<div class="rightContentsWrapper">'+'<div class="titleSet">'+
+                getTitle(thisData)+
+                getPrice(thisData)+'</div>'+
+                getDesc(thisData)+'</div>'+'</a>'+'</div>';}
+            return domParam;}
+        if(listShowStyle==medium){for(var i=0;i<creativeItemSize;i++){var thisData=this.scaleout_creative_items[i];domParam+='<div class="list medium">'+'<a target="_blank" href="'+thisData.click_url+'">'+'<div cass="leftContentsWrapper">'+'<div class="imgWrapper medium">'+
+                getImageUrl(thisData)+'</div>'+'</div>'+'<div class="rightContentsWrapper medium">'+'<div class="titleSet">'+
+                getTitle(thisData)+
+                getPrice(thisData)+'</div>'+'</div>'+'</a>'+'</div>';}
+            return domParam;}
+        if(listShowStyle==small){for(var i=0;i<creativeItemSize;i++){var thisData=this.scaleout_creative_items[i];domParam+='<div class="list small">'+'<a target="_blank" href="'+thisData.click_url+'">'+'<div clas="leftContentsWrapper">'+'<div class="imgWrapper small">'+
+                getImageUrl(thisData)+'</div>'+'</div>'+'<div class="rightContentsWrapper">'+'<div class="titleSet">'+
+                getPrice(thisData)+'</div>'+'</div>'+'</a>'+'</div>';}
+            return domParam;}},getListWidth:function(){switch(this.getListShowStyle()){case largest:return 576;case secondLargest:return 288;case large:return 192;case medium:return 96;case small:return 72;}},setistWidth:function(){eLists.style.width=this.getListWidth()*this.getCreativeItemSize()+"px";},getOptOutUrl:function(){return dataSet.optOutUrl;},getOptOutImg:function(){return dataSet.optOutImg;},setOptOutImg:function(){adArea.getElementsByClassName('jsOptOutImg')[0].src=this.getOptOutImg();},getLogoImg:function(){return dataSet.logoImg;},setLogoImg:function(){adArea.getElementsByClassName('banner')[0].src=this.getLogoImg();}};eLists.innerHTML=makeDOM.getDOM();makeDOM.setListWidth();makeDOM.setLogoImg();makeDOM.setOptOutImg();(function(){var onMouseInfo=function(){addClass(this,activeClass);this.innerHTML='<a class="jsInfoMark active" target="_blank" href="'+makeDOM.getOptOutUrl()+'">'+'<span class="jsInfoText">この広告について</span>'+'</a>';eInfoMark.removeEventListener('click',onMouseInfo,false);},outMouseInfo=function(){removeClass(this,activeClass);this.innerHTML='<a class="jsInfoMark">'+'<span class="jsInfoShortText active"><img src="'+makeDOM.getOptOutImg()+'"></span>'+'</a>';eInfoMark.addEventListener('click',onMouseInfo,false);};var eInfoMark=adArea.getElementsByClassName('jsInfoMarkWrapper')[0];eInfoMark.addEventListener('click',onMouseInfo,false);eInfoMark.addEventListener('mouseout',outMouseInfo,false);})();(function(){var addActiveClass=function(){addClass(this,activeClass);addClass(this.getElementsByClassName('jsLists')[0],activeClass);},removeActiveClass=function(){removeClass(this,activeClass);removeClass(this.getElementsByClassName('jsLists')[0],activeClass);},eListsItems=eLists.getElementsByClassName(listItemsClassName);for(var i=0;i<eListsItems.length;i++){eListsItems[i].addEventListener('mouseover',addActiveClass,false);eListsItems[i].addEventListener('mouseout',removeActiveClass,false);}
+        function moveAndHighlight(){var listSize=makeDOM.getCreativeItemSize(),highlightListCount=0,saveListHighlightCount=0,marginSize=0,moveCount=1,limitView=makeDOM.getListShowStyle();var highlight=function(){ar addActiveClassForHighlight=function(targetElem){if(isEmpty(targetElem))return;addClass(targetElem,activeClass);},removeActiveClassForHighlight=function(targetElem){if(isEmpty(targetElem))return;removeClass(targetElem,activeClass);},allRemoveActiveClassForHighlight=function(){for(var k=0;k<=listSize;k++){removeActiveClassForHighlight(eListsItems[k]);}};if(!hasClass(eListsItems[saveListHighlightCount],activeClass)){allRemoveActiveClassForHighlight();addActiveClassForHighlight(eListsItems[saveListHighlightCount]);}
+            if(listSize>limitView){if(saveListHighlightCount==listSize){setTimeout(resetMove(),600);}
+            else if(highlightListCount==limitView){highlightListCount=0;moveInlineLists();}else{highlightListCount++;saveListHighlightCount++;setTimeout(highlight,3000);}}else if(listSize==1){setTimeout(highlight3000);}else if(listSize==highlightListCount){moveAndHighlight();}else{highlightListCount++;saveListHighlightCount++;setTimeout(highlight,3000);}};function moveInlineLists(){var columnSize=moveCount*limitView*makeDOM.getListWidth(),move=function move(){if(marginSize<=columnSize){eLists.style.marginLeft=-1*marginSize+"px";marginSize+=4;setTimeout(move,30);}else{moveCount++;setTimeout(highlight(),600);}};move();}
+            function resetMove(){setTimeout(moveAndHighlight(),2000);eLists.style.marginLeft="0px";}
+            highlight();}
+        moveAndHighlight();})();function addClass(targetElem,className){if(isEmpty(targetElem))return;if(hasClass(targetElem,className))return;targetElem.className=targetElem.className+' '+className;}
+        function removeClass(targetElem,className){if(isEmpty(targetElem))return;var classArray=targetElem.className.split(' ');var index=classArray.indexOf(className);if(index>=0){classArray.splice(index,1);targtElem.className=classArray.join(' ');}}
+        function hasClass(targetElem,className){if(isEmpty(targetElem))return false;var index=targetElem.className.split(' ').indexOf(className);if(index>=0){return true;}
+            return false;}
+        function isEmpty(obj){if(obj==null)return true;if(obj==undefined)return true;if(obj=="")return true;if(obj.length<1)return true;return false;}}());
+
+</script>
+]]></adtag>
+            </creative>
+            <creative id="584818:1467177032474" name="dynamic|160×600" size_type="16" type="html" category="22" url="" start_date="2016-06-28" end_date="2017-01-05">
+              <landing_page_url destination="http://www.eheya.net/"/>
+              <adtag><![CDATA[<style>
+    .mainWrapper_160600-1 .jsInfoMarkWrapper .jsInfoMark,.mainWrapper_160600-1 img,article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}a,abbr,address,article,aside,udio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;vertical-align:baseline;font:inherit;font-size:100%}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-spacing:0;border-collapse:collapse}.mainWrapper_160600-1{height:600px;width:160px;position:relative;overflow:hidden;box-sizing:border-box;border:1px solid #bdbdbd;vertical-align:middle}.mainWrapper_160600-1 a{text-decoration:none}.mainWrapper_160600-1 .jsInfoMarkWrapper{position:absolute;top:0;right:0;background-color:rgba(109,109,109,.64);text-align:center;z-index:2;border-radius:8px;font-weight:700}.mainWrapper_160600-1 .jsInfoMarkWrapper.active{width:90px}.mainWrapper_160600-1 .jsInfoMarkWrapper .jsInfoMark .jsInfoText{display:b:
+a.click_url+'">'+'<div class="leftContentsWrapper">'+'<div class="imgWrapper secondLargest">'+
+                getImageUrl(thisData)+'</div>'+'</div>'+'<div class="rightContentsWrapper">'+'<div class="titleSet">'+
+                getTitle(thisData)+
+                getPrice(thisData)+'</div>'+
+                getDesc(thisData)+'</div>'+'</a>'+'</div>';}
+            return domParam;}
+        if(listShowStyle==large){for(var i=0;i<creativeItemSize;i++){var thisData=this.scaleout_creative_items[i];domParam+='<div class="list large">'+'<a target="_blank" href="'+thisData.click_url+'">'+'<div class="leftContentsWrapper">'+'<div class="imgWrapper">'+
+                getImageUrl(thisData)+'</div>'+'</div>'+'<div class="rightContentsWrapper">'+'<div class="titleSet">'+
+                getTitle(thisData)+
+                getPrice(thisData)+'</div>'+
+                getDesc(thisData)+'</div>'+'</a>'+'</div>';}
+            return domParam;}
+        if(listShowStyle==medium){for(var i=0;i<creativeItemSize;i++){var thisData=this.scaleout_creative_items[i];domParam+='<div class="list medium">'+'<a target="_blank" href="'+thisData.click_url+'">'+'<div class="leftContentsWrapper">'+'<div class="imgWrapper medium">'+
+                getImageUrl(thisData)+'</div>'+'</div>'+'<div class="rightContentsWrapper medium">'+'<div class="titleSet">'+
+                getTitle(thisData)+
+                getPrice(thisData)+'</div>'+'</div>'+'</a>'+'</div>';}
+            return domParam;}
+        if(listShowStyle==small){for(var i=0;i<creativeItemSize;i++){var thisData=this.scaleout_creative_items[i];domParam+='<div class="list small">'+'<a target="_blank" href="'+thisData.click_url+'">'+'<div class="leftContentsWrapper">'+'<div class="imgWrapper small">'+
+                getImageUrl(thisData)+'</div>'+'</div>'+'<div class="rightContentsWrapper">'+'<div class="titleSet">'+
+                getPrice(thisData)+'</div>'+'</div>'+'</a>'+'</div>';}
+            return domParam;}},getListWidth:function(){switch(this.getListShowStyle()){case largest:return 576;case secondLargest:return 288;case large:return 192;case medium:return 96;case small:return 72;}},setListWidth:function(){eLists.style.width=this.getListWidth()*this.getCreativeItemSize()+"px";},getOptOutUrl:function(){return dataSet.optOutUrl;},getOptOutImg:function(){return dataSet.optOutImg;},setOptOutImg:function(){adArea.getElementsByClassName('jsOptOutImg')[0].src=this.getOptOutImg();},getLogoImg:function(){return dataSet.logoImg;},setLogoImg:function(){adArea.getElementsByClassName('banner')[0].src=this.getLogoImg();}};eLists.innerHTML=makeDOM.getDOM();makeDOM.setListWidth();makeDOM.setLogoImg();makeDOM.setOptOutImg();(function(){var onMouseInfo=function(){addClass(this,activeClass);this.innerHTML='<a class="jsInfoMark active" target="_blank" href="'+makeDOM.getOptOutUrl()+'">'+'<span class="jsInfoText">この広告について</span>'+'</a>';eInfoMark.removeEventListener('click',onMouseInfo,false);},outMouseInfo=function(){removeClass(this,activeClass);this.innerHTML='<a class="jsInfoMark">'+'<span class="jsInfoShortText active"><img src="'+makeDOM.getOptOutImg()+'"></span>'+'</a>';eInfoMark.addEventListener('click',onMouseInfo,false);};var eInfoMark=adArea.getElementsByClassName('jsInfoMarkWrapper')[0];eInfoMark.addEventListener('click',onMouseInfo,false);eInfoMark.addEventListener('mouseout',outMouseInfo,false);})();(function(){var addActiveClass=function(){addClass(this,activeClass);addClass(this.getElementsByClassName('jsLists')[0],activeClass);},removeActiveClass=function(){removeClass(this,activeClass);removeClass(this.getElementsByClassName('jsLists')[0],activeClass);},eListsItems=eLists.getElementsByClassName(listItemsClassName);for(var i=0;i<eListsItems.length;i++){eListsItems[i].addEventListener('mouseover',addActiveClass,false);eListsItems[i].addEventListener('mouseout',removeActiveClass,false);}
+        function moveAndHighlight(){var listSize=makeDOM.getCreativeItemSize(),highlightListCount=0,saveListHighlightCount=0,marginSize=0,moveCount=1,limitView=makeDOM.getListShowStyle();var highlight=function(){var addActiveClassForHighlight=function(targetElem){if(isEmpty(targetElem))return;addClass(targetElem,activeClass);},removeActiveClassForHighlight=function(targetElem){if(isEmpty(targetElem))return;removeClass(targetElem,activeClass);},allRemoveActiveClassForHighlight=function(){for(var k=0;k<=listSize;k++){removeActiveClassForHighlight(eListsItems[k]);}};if(!hasClass(eListsItems[saveListHighlightCount],activeClass)){allRemoveActiveClassForHighlight();addActiveClassForHighlight(eListsItems[saveListHighlightCount]);}
+            if(listSize>limitView){if(saveListHighlightCount==listSize){setTimeout(resetMove(),600);}
+            else if(highlightListCount==limitView){highlightListCount=0;moveInlineLists();}else{highlightListCount++;saveListHighlightCount++;setTimeout(highlight,3000);}}else if(listSize==1){setTimeout(highlight,3000);}else if(listSize==highlightListCount){moveAndHighlight();}else{highlightListCount++;saveListHighlightCount++;setTimeout(highlight,3000);}};function moveInlineLists(){var columnSize=moveCount*limitView*makeDOM.getListWidth(),move=function move(){if(marginSize<=columnSize){eLists.style.marginLeft=-1*marginSize+"px";marginSize+=4;setTimeout(move,30);}else{moveCount++;setTimeout(highlight(),600);}};move();}
+            function resetMove(){setTimeout(moveAndHighlight(),2000);eLists.style.marginLeft="0px";}
+            highlight();}
+        moveAndHighlight();})();function addClass(targetElem,className){if(isEmpty(targetElem))return;if(hasClass(targetElem,className))return;targetElem.className=targetElem.className+' '+className;}
+        function removeClass(targetElem,className){if(isEmpty(targetElem))return;var classArray=targetElem.className.split(' ');var index=classArray.indexOf(className);if(index>=0){classArray.splice(index,1);targetElem.className=classArray.join(' ');}}
+        function hasClass(targetElem,className){if(isEmpty(targetElem))return false;var index=targetElem.className.split(' ').indexOf(className);if(index>=0){return true;}
+            return false;}
+        function isEmpty(obj){if(obj==null)return true;if(obj==undefined)return true;if(obj=="")return true;if(obj.length<1)return true;return false;}}());
+
+</script>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <div style="background-color: #000;width:300px;height:250px;margin:0 auto;padding:0;text-align:center;color:#fff;" id="target">
