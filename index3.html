@@ -22,10 +22,10 @@ var player = videojs('content_video');
 google.ima.settings.setVpaidAllowed(true);
 //...
 player.ima({
-    debug: config['debug'],
     adTagUrl: 'https://pixel.adsafeprotected.com/vast?anId=923003&ias_ad_duration=30&advId=${ADVERTISER_ID}&campId=${ORDER_ID}&pubId=${SSP_TAG_ID}&chanId=${SIZE}&placementId=${SCHEDULE_ID}&planId=${CREATIVE_ID}&adsafe_par&bidurl=16ar1s&bidPr=0&uId=${UID}&impId=${SEQ_ID}&originalVast=https://apvdr.com/v2/vast.xml.php?s=d945157fe5e42664459f17b9adc963ca&vv=2.0&ve=0',
     id: 'content_video'
 });
+player.play();
     </script>
   </body>
 </html>
