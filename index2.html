@@ -1,14 +1,45 @@
 <html>
 <body>
 
-<script type="text/javascript" src="https://cdn.apvdr.com/js/ScriptLoader.min.js"></script>
-<script type="text/javascript">APV.ScriptLoader.inject('https://bigman-test.scaleout.jp/sdk/js/adg-script-loader-stg.js?id=10283&targetID=adg_10283&displayid=1&adType=FREE&width=320&height=180&async=true&tagver=2.0.0&nofrm=st%3dnoad')</script>
+ <script type="text/javascript"> 
+ (function(w){ 
+    var groupId = '1000058559'; 
+    var unitId = '1000088265'; 
+    var id = unitId + '.' + String(Date.now()) + '.' + String(Math.random()); 
+    var url = 'https://m-sakamoto.r53.fluct.me/native/?G='+groupId+'&u='+unitId+'&mp='+id+ 
+        '&href='+encodeURIComponent(w.location.href)+ 
+        '&R='+encodeURIComponent(w.document.referrer); 
+    var s = w.document.createElement('script'); 
+    s.id = 'fluct-nativertb-' + id; 
+    s.src = url; 
+    s.async = true; 
+    w.document.body.appendChild(s); 
+ })(window); 
+ </script>
+```
+
+iOS
+```
+<script type="text/javascript"> 
+ (function(w){ 
+    var groupId = '1000058559'; 
+    var unitId = '1000088264'; 
+    var id = unitId + '.' + String(Date.now()) + '.' + String(Math.random()); 
+    var url = 'https://m-sakamoto.r53.fluct.me/native/?G='+groupId+'&u='+unitId+'&mp='+id+ 
+        '&href='+encodeURIComponent(w.location.href)+ 
+        '&R='+encodeURIComponent(w.document.referrer); 
+    var s = w.document.createElement('script'); 
+    s.id = 'fluct-nativertb-' + id; 
+    s.src = url; 
+    s.async = true; 
+    w.document.body.appendChild(s); 
+ })(window); 
+ </script>
 -------
 
 
+
 <!--
-
-
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
