@@ -1,31 +1,26 @@
 <html>
   <head>
-    <!-- Load dependent stylesheets. -->
-    <link href="//vjs.zencdn.net/4.5/video-js.css" rel="stylesheet">
-    <link rel="stylesheet" href="videojs.ads.css" />
-    <link rel="stylesheet" href="videojs.ima.css" />
   </head>
 
   <body>
-    <video id="content_video" class="video-js vjs-default-skin"
-        controls preload="auto" width="YOUR_VIDEO_WIDTH" height="YOUR_VIDEO_HEIGHT">
-      <source src="PATH_TO_YOUR_CONTENT_VIDEO" type="YOUR_CONTENT_VIDEO_TYPE" />
-    </video>
-    <!-- Load dependent scripts -->
-    <script src="//vjs.zencdn.net/4.5/video.js"></script>
-    <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
-    <script src="videojs.ads.js"></script>
-    <script src="videojs.ima.js"></script>
-    <script type="text/javascript">
-var player = videojs('content_video');
-//...
-google.ima.settings.setVpaidAllowed(true);
-//...
-player.ima({
-    adTagUrl: 'https://pixel.adsafeprotected.com/vast?anId=923003&ias_ad_duration=30&advId=${ADVERTISER_ID}&campId=${ORDER_ID}&pubId=${SSP_TAG_ID}&chanId=${SIZE}&placementId=${SCHEDULE_ID}&planId=${CREATIVE_ID}&adsafe_par&bidurl=16ar1s&bidPr=0&uId=${UID}&impId=${SEQ_ID}&originalVast=https://apvdr.com/v2/vast.xml.php?s=d945157fe5e42664459f17b9adc963ca&vv=2.0&ve=0',
-    id: 'content_video'
-});
-player.play();
-    </script>
+cv確認
+<script type="text/javascript">
+  (function() {
+    var RX = window.RX = window.RX
+      || {}; RX.ConvContext = RX.ConvContext
+      || {}; RX.ConvContext.queue = RX.ConvContext.queue
+      || [];
+    RX.ConvContext.queue.push({
+        "advertiser_id": 614,
+        "price": 0,
+        "convtype": 1,
+        "dat": ""
+    });
+    var el = document.createElement('script'); el.type = 'text/javascript'; el.async = true;
+    el.src = (('https:' == document.location.protocol) ? 'https://' : 'http://') + 'js.rx/rx-conversion.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(el, s);
+  })();
+</script>
+aaa
   </body>
 </html>
