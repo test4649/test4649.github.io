@@ -1,0 +1,21 @@
+<div id="ad">
+<script>
+  var iframe = document.createElement('iframe');
+  iframe.width = 300;
+  iframe.height = 250;
+  iframe.frameBorder = "0";
+  iframe.scrolling = "no";
+  iframe.marginWidth = 0;
+  iframe.marginHeight = 0;
+  parentDom.appendChild(iframe);
+  var doc = iframe.contentWindow.document;
+  doc.open();
+  var d = "";
+  d += '<html><head></head>';
+  d += '<body>';
+  d += '<script src="'http://localhost:8080/script.js'"></script>';
+  d += '<script>inDapIF = true;</script>';
+  d += '</body></html>';
+  doc.write(d);
+  doc.close();
+</script>
