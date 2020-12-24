@@ -8,7 +8,19 @@ var rdntag = rdntag || {};
 rdntag.cmd = rdntag.cmd || [];
 rdntag.cmd.push(function() {
   rdntag
-    .defineAd(786, "rdn-adspot-320-25306693")
+    .defineAd(786, "rdn-adspot-320-25306693");
+    document
+      .getElementById('rdn-adspot-320-25306693')
+      .addEventListener('slotResponseReceived', function(e) {
+        console.log(
+          'slotResponseReceived event is called:',
+          e.detail.adReturned,
+          e.detail.status
+        );
+        if (e && e.detail && e.detail.adReturned) {
+          console.log('ad is displayed');
+        }
+      });
   rdntag.display("rdn-adspot-320-25306693");
 });
 </script>
