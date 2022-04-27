@@ -1,43 +1,13 @@
 <html>
 <body>
 
-<script async src="https://s.yimg.jp/images/listing/tool/cv/ytag.js"></script>
 <script>
-window.yjDataLayer = window.yjDataLayer || [];
-function ytag() { yjDataLayer.push(arguments); }
+var seg_ids = "111,222,333";
+seg_id = seg_ids.replace('/,/g', '|');
+gtag('event', 'conversion',
 
- 
-
-ytag({
-  "type":"yjad_retargeting",
-  "config":{
-  "yahoo_retargeting_id": "Q1284PRFHJ",
-  "yahoo_retargeting_label": "seg1",
-  "yahoo_retargeting_page_type": "home"
-  }
-});
-
- 
-
-ytag({
-  "type":"yjad_retargeting",
-  "config":{
-  "yahoo_retargeting_id": "Q1284PRFHJ",
-  "yahoo_retargeting_label": "seg2",
-  "yahoo_retargeting_page_type": "home"
-  }
-});
-
- 
-
-ytag({
-  "type":"yjad_retargeting",
-  "config":{
-  "yahoo_retargeting_id": "Q1284PRFHJ",
-  "yahoo_retargeting_label": "seg3",
-  "yahoo_retargeting_page_type": "home"
-  }
-});
+{ 'allow_custom_scripts': true, 'u2': seg_id, 'send_to': 'DC-11108333/invmedia/segme0+standard' }
+);
 </script>
 
 
