@@ -3,19 +3,31 @@
   </head>
 
   <body>
+※下記ソースコードはUTF-8で保存して下さい。
+以下のタグをサイトに設置してください。
+* Save the following source code with UTF-8.
+Please set the following tag on the site.
 
-300x250<br>
-<div id="rdn-adspot-286-11794200"></div>
-<script>
-var rdntag = rdntag || {};
-rdntag.cmd = rdntag.cmd || [];
-rdntag.cmd.push(function() {
-  rdntag
-    .defineAd("286", "rdn-adspot-286-11794200").setDebug(true);
-  rdntag.display("rdn-adspot-286-11794200");
-});
+<!-- START of Rakuten Marketing Conversion Tag -->
+<!-- 「注意／削除する場合はリンクシェアジャパンへ連絡下さい」「ATTENTION／Please contact LINKSHARE Japan when you delete」 -->
+<script type="text/javascript">
+var rm_trans = {
+    trafficGateConfig: {mid: '6079'},
+    orderid : 'ORDERID',
+    currency: 'JPY',
+    conversionType: 'Sale',
+    lineitems : [{
+        quantity : 1,
+        unitPriceLessTax: SINGLE_UNIT_ITEM_PRICE_NO_TAX,
+        SKU: '1'
+    }]
+};
+
+/*Do not edit any information beneath this line*/
+if(!window.DataLayer){window.DataLayer={Sale:{Basket:rm_trans}}}else{DataLayer.Sale=DataLayer.Sale||{Basket:rm_trans};DataLayer.Sale.Basket=DataLayer.Sale.Basket||rm_trans}DataLayer.Sale.Basket.Ready = true;function __readRMCookie(e){for(var a=e+"=",r=document.cookie.split(";"),t=0;t<r.length;t++){for(var i=r[t];" "==i.charAt(0);)i=i.substring(1,i.length);if(0==i.indexOf(a))return i.substring(a.length,i.length)}return""}function __readRMCookiev2(e,a){for(var r=__readRMCookie(a=a||"rmStore");r!==decodeURIComponent(r);)r=decodeURIComponent(r);for(var t=r.split("|"),i=0;i<t.length;i++){var n=t[i].split(":")[0],o=t[i].split(":")[1];if(n===e)return o}return""}function __readParam(e,a,r,t){var i=a||"",n=r||"",o=t||{},d=__readRMCookiev2(e||""),s=o[i],m=(d=o.ignoreCookie||!1?0:d)||s||n;return m=("string"!=typeof m||"false"!==m.toLowerCase())&&m}function sRAN(){var e=DataLayer&&DataLayer.Sale&&DataLayer.Sale.Basket?DataLayer.Sale.Basket:{},a=e.affiliateConfig||{},r=__readParam("atm","tagType","pixel",a),t=__readParam("adr","discountType","order",a),i=__readParam("acs","includeStatus","false",a),n=__readParam("arto","removeOrderTax","false",a),o=__readParam("artp","removeTaxFromProducts","false",a),d=__readParam("artd","removeTaxFromDiscount","false",a),s=__readParam("atr","taxRate",0,a);s=Number(s);var m=__readParam("adn","domain","track.linksynergy.com",a),u=__readParam("ald","land",!1,{})||(a.land&&!0===a.land?__readRMCookie("ranLandDateTime"):a.land)||!1,l=__readParam("atrv","tr",!1,{})||(a.tr&&!0===a.tr?__readRMCookie("ranSiteID"):a.tr)||!1,c=!1,p=__readParam("amid","ranMID","",a)||e.ranMID;if(!p)return!1;if(!(void 0===a.allowCommission||"false"!==a.allowCommission))return!1;var f=e.orderid||"OrderNumberNotAvailable",y="",_="",v="",N="",h=e.currency||"";h=h.toUpperCase();var g=e.taxAmount?Math.abs(Math.round(1*Number(e.taxAmount))):0,C=e.discountAmount?Math.abs(Math.round(1*Number(e.discountAmount))):0;if(d&&s){var b=(100+Number(s))/100;C=Math.round(C/b)}var S="pixel"===r?"ep":"mop"===r?"eventnvppixel":"ep",D=e.customerStatus||"",P=document.location.protocol+"//"+m+"/"+S+"?",w="";null!=D&&""!=D&&(i&&"EXISTING"==D.toUpperCase()||i&&"RETURNING"==D.toUpperCase())&&(w="R_");for(var x=[],T=0,R=0;R<(e.lineitems?e.lineitems.length:0);R++){for(var k=!1,L=window.JSON?JSON.parse(JSON.stringify(e.lineitems[R])):e.lineitems[R],I=0;I<x.length;I++){x[I].SKU===L.SKU&&(k=!0,x[I].quantity=Number(x[I].quantity)+Number(L.quantity))}k||x.push(L),T+=Number(L.quantity)*Number(L.unitPriceLessTax||L.unitPrice)*100}for(R=0;R<x.length;R++){L=x[R];var M=encodeURIComponent(L.SKU),U=L.unitPriceLessTax||L.unitPrice,A=L.quantity,O=encodeURIComponent(L.productName)||"",E=Math.round(Number(U)*Number(A)*1);if(o&&s&&(!L.unitPriceLessTax||L.unitPriceLessTax===L.unitPrice))E/=b=(100+s)/100;"item"===t.toLowerCase()&&C&&(E-=C*E/T),y+=w+M+"|",_+=A+"|",v+=Math.round(E)+"|",N+=w+O+"|"}y=y.slice(0,-1),_=_.slice(0,-1),v=v.slice(0,-1),N=N.slice(0,-1),C&&"order"===t.toLowerCase()?(y+="|"+w+"DISCOUNT",N+="|"+w+"DISCOUNT",_+="|0",v+="|-"+C):C&&"item"===t.toLowerCase()&&(c=!0),n&&g&&(y+="|"+w+"ORDERTAX",_+="|0",v+="|-"+g,N+="|"+w+"ORDERTAX"),P+="mid="+p+"&ord="+f+"&skulist="+y+"&qlist="+_+"&amtlist="+v+"&cur="+h+"&namelist="+N+"&img=1&",u&&(P+="land="+u+"&"),l&&(P+="tr="+l+"&"),c&&(P+="discount="+C+"&"),"&"===P[P.length-1]&&(P=P.slice(0,-1));var B,q=document.createElement("img");q.setAttribute("src",P),q.setAttribute("height","1px"),q.setAttribute("width","1px"),(B=document.getElementsByTagName("script")[0]).parentNode.insertBefore(q,B)}function sDisplay(){var e=null,a=e,r=e,t=e,i=e,n=window.DataLayer&&window.DataLayer.Sale&&window.DataLayer.Sale.Basket?window.DataLayer.Sale.Basket:{},o=n.displayConfig||{},d=n.customerStatus||"",s=n.discountAmount?Math.abs(Number(n.discountAmount)):0,m=e,u=__readParam("dmid","rdMID","",o);if(!u)return!1;var l=__readParam("dtm","tagType","js",o),c="if"===(l="js"===l||"if"===l||"img"===l?l:"js")?"iframe":"img"===l?l:"script",p="//"+__readParam("ddn","domain","tags.rd.linksynergy.com",o)+"/"+l+"/"+u,f=__readParam("dis","includeStatus","false",o),y="";if(null!=d&&""!=d&&(f&&"EXISTING"==d.toUpperCase()||f&&"RETURNING"==d.toUpperCase())&&(y="R_"),!n.orderid||!n.conversionType)return!1;t=0,r=y+n.orderid,a="",i="conv",m=n.currency;for(var _=0;_<(n.lineitems?n.lineitems.length:0);_++)t+=Number(n.lineitems[_].unitPriceLessTax)*Number(n.lineitems[_].quantity)||Number(n.lineitems[_].unitPrice)*Number(n.lineitems[_].quantity),a+=encodeURIComponent(n.lineitems[_].SKU)+",";t=Math.round(100*(t-s))/100,(a=a.slice(0,-1))&&(p=p.indexOf("?")>-1?p+"&prodID="+a:p+"/?prodID="+a),r&&(p=p.indexOf("?")>-1?p+"&orderNumber="+r:p+"/?orderNumber="+r),t&&(p=p.indexOf("?")>-1?p+"&price="+t:p+"/?price="+t),m&&(p=p.indexOf("?")>-1?p+"&cur="+m:p+"/?cur="+m),i&&(p=p.indexOf("?")>-1?p+"&pt="+i:p+"/?pt="+i);var v=document.createElement(c);v.src=p,"script"===c?v.type="text/javascript":"iframe"===c&&v.setAttribute("style","display: none;"),document.getElementsByTagName("body")[0].appendChild(v)}function sSearch(){var e=window.DataLayer&&window.DataLayer.Sale&&window.DataLayer.Sale.Basket?window.DataLayer.Sale.Basket:{},a=e.searchConfig||{},r=__readParam("smid","rsMID","",a);if(!r)return!1;var t=function(){var t=e.discountAmount?Math.abs(Number(e.discountAmount)):0,i=__readParam("sct","conversionType","conv",a),n=0,o="";if(!e.orderid)return!1;n=0,o=e.orderid;for(var d=0;d<(e.lineitems?e.lineitems.length:0);d++)n+=Number(e.lineitems[d].unitPrice)*Number(e.lineitems[d].quantity);n=Math.round(100*(n-t))/100;window.DataLayer.Sale.Basket;var s=[];s[0]="id="+r,s[1]="type="+i,s[2]="val="+n,s[3]="orderId="+o,s[4]="promoCode="+e.discountCode||"",s[5]="valueCurrency="+e.currency||"USD",s[6]="GCID=",s[7]="kw=",s[8]="product=",k_trackevent(s,"113")},i=document.location.protocol.indexOf("s")>-1?"https://":"http://";i+="113.xg4ken.com/media/getpx.php?cid="+r;var n=document.createElement("script");n.type="text/javascript",n.src=i,n.onload=t,n.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||t()},document.getElementsByTagName("head")[0].appendChild(n)}sRAN(),sDisplay(),sSearch();
 </script>
-<script src="https://s-cdn.rmp.rakuten.co.jp/js/aa.js" async></script>
+<!-- END of Rakuten Marketing Conversion Tag -->
+
 
   </body>
 </html>
